@@ -128,6 +128,7 @@ mi_proyecto_adk/
 └── README.md               ← Documentación
 
 
+´´´python
 CÓDIGO MÍNIMO NECESARIO
 ========================
 
@@ -192,7 +193,7 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
+´´´
 
 FLUJO DE DATOS SIMPLIFICADO
 ============================
