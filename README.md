@@ -1,24 +1,21 @@
-===============================================================================
-FLUJO DE EJECUCIÓN:
-===============================================================================
+# FLUJO DE EJECUCIÓN
 
-1. INICIO           → Importar librerías de ADK y Configurar credenciales de Google
-2. TOOL             → Definir función que el agente puede usar
-3. AGENT            → Crear agente con instrucciones y herramientas
-4. SESSION SERVICE  → Crear servicio para guardar conversaciones
-5. RUNNER           → Crear ejecutor que conecta todo
-6. INTERACCIÓN      → Enviar mensaje y recibir respuesta
+1. **INICIO**: Importar librerías de ADK y Configurar credenciales de Google
+2. **TOOL**: Definir función que el agente puede usar
+3. **AGENT**: Crear agente con instrucciones y herramientas
+4. **SESSION SERVICE**: Crear servicio para guardar conversaciones
+5. **RUNNER**: Crear ejecutor que conecta todo
+6. **INTERACCIÓN**: Enviar mensaje y recibir respuesta
 
+---
 
-===============================================================================
-DIAGRAMA VISUAL: ARQUITECTURA DE ADK
-===============================================================================
+# DIAGRAMA VISUAL: ARQUITECTURA DE ADK
+
 Este diagrama muestra cómo fluye la información en un proyecto ADK
 
+## FLUJO DE EJECUCIÓN DE ADK
 
-FLUJO DE EJECUCIÓN DE ADK
-===========================
-
+```
 ┌─────────────────────────────────────────────────────────────────┐
 │  1. USUARIO ENVÍA MENSAJE                                       │
 │  ↓                                                              │
@@ -63,6 +60,9 @@ FLUJO DE EJECUCIÓN DE ADK
 │  • Recibe "¡Hola María!"                                        │
 │  • Formula respuesta final                                      │
 └──────────────────────┬──────────────────────────────────────────┘
+                       │
+                       ↓
+┌────────────────────────────────────────────────
                        │
                        ↓
 ┌─────────────────────────────────────────────────────────────────┐
@@ -264,16 +264,3 @@ ERRORES COMUNES Y SOLUCIONES
 
 
 ===============================================================================
-"""
-
-
-
-
-
-
-
-
-
-
-
-"""
