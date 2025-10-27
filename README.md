@@ -61,8 +61,6 @@ Este diagrama muestra cómo fluye la información en un proyecto ADK
 │  • Formula respuesta final                                      │
 └──────────────────────┬──────────────────────────────────────────┘
                        │
-                       ↓
-┌────────────────────────────────────────────────
                        │
                        ↓
 ┌─────────────────────────────────────────────────────────────────┐
@@ -79,11 +77,11 @@ Este diagrama muestra cómo fluye la información en un proyecto ADK
 │  ↓                                                              │
 │  "¡Hola María!"                                                 │
 └─────────────────────────────────────────────────────────────────┘
+```
 
+## COMPONENTES CLAVE
 
-COMPONENTES CLAVE
-==================
-
+```
 ┌─────────────────┐
 │     AGENT       │  ← El "cerebro" que toma decisiones
 │   (Cerebro)     │
@@ -105,33 +103,32 @@ COMPONENTES CLAVE
 │ SESSION SERVICE │  ← Guarda el historial de conversación
 │    (Memoria)    │
 └─────────────────┘
+```
 
+## ANALOGÍA CON UN RESTAURANTE
 
-ANALOGÍA CON UN RESTAURANTE
-=============================
-
+```
 AGENT        = Chef (decide qué cocinar y cómo)
 TOOLS        = Utensilios de cocina (sartén, cuchillo, horno)
 RUNNER       = Mesero (toma pedidos y entrega comida)
 SESSION      = Libreta de pedidos (historial de lo que ha pedido cada cliente)
 USER         = Cliente (hace pedidos)
+```
 
+## ESTRUCTURA DE ARCHIVOS TÍPICA
 
-ESTRUCTURA DE ARCHIVOS TÍPICA
-==============================
-
+```
 mi_proyecto_adk/
 │
 ├── main.py                 ← Tu código principal
 ├── .env                    ← API Keys (no subir a git)
 ├── requirements.txt        ← Dependencias (google-adk)
 └── README.md               ← Documentación
+```
 
+## CÓDIGO MÍNIMO NECESARIO
 
-´´´python
-CÓDIGO MÍNIMO NECESARIO
-========================
-
+```python
 import asyncio
 import os
 from google.adk.agents import Agent
@@ -193,11 +190,11 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-´´´
+```
 
-FLUJO DE DATOS SIMPLIFICADO
-============================
+## FLUJO DE DATOS SIMPLIFICADO
 
+```
 ┌─────────┐
 │ Usuario │
 └────┬────┘
@@ -220,10 +217,10 @@ FLUJO DE DATOS SIMPLIFICADO
 ┌─────────┐
 │ Usuario │ ← recibe respuesta
 └─────────┘
+```
 
+## EJEMPLO PRÁCTICO: AGENTE CALCULADORA
 
-EJEMPLO PRÁCTICO: AGENTE CALCULADORA
-======================================
 
 1. Usuario: "¿Cuánto es 5 + 3?"
 
@@ -248,8 +245,8 @@ EJEMPLO PRÁCTICO: AGENTE CALCULADORA
 
 
 
-ERRORES COMUNES Y SOLUCIONES
-==============================
+## ERRORES COMUNES Y SOLUCIONES
+
 
 ❌ Error: "API Key not found"
 ✓ Solución: Verifica que hayas configurado os.environ["GOOGLE_API_KEY"]
@@ -262,6 +259,3 @@ ERRORES COMUNES Y SOLUCIONES
 
 ❌ Error: "Session not found"
 ✓ Solución: Crea la sesión antes de enviar mensajes
-
-
-===============================================================================
